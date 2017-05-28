@@ -1,0 +1,26 @@
+<!-- creater:zhangliansheng
+date:2017-5-28 -->
+<div class="form-horizontal" role="form">
+  <div class="form-group">
+    <label for="firstname" class="col-sm-2 control-label">名字</label>
+    <div class="col-sm-4">
+      <input type="text" name="name" ng-model="$login.person.name" class="form-control" id="firstname" placeholder="请输入名字">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password" class="col-sm-2 control-label">密码</label>
+    <div class="col-sm-4">
+      <input type="password" name="password" ng-model="$login.person.password" class="form-control" id="password" placeholder="请输入密码">
+    </div>
+  </div>
+
+  <div class="form-group">
+  	<div ng-if='$login.msg' ng-bind="$login.msg"></div>
+  </div>
+ 
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" ng-click="$login.loginBtn();" class="btn btn-default">登录</button>
+    </div>
+  </div>
+</div>
