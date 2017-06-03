@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>测试页面</title>
+<script
+	src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+	$.ajax({
+        type: 'POST',
+       // url: 'http://localhost:8080/MyServiceImplService.asmx/getStr',
+       url: 'findPersons',
+        //data:  '{yourName:"李四",age:25,opcode:13221}',
+       //data:'opcode=12312',
+       data:{
+		'userId':"zhagnliansheng",
+		"name":"123"
+           },
+        dataType: 'json',
+        success: function (result) {
+            debugger;
+        	alert(result.errInfo);   
+        	
+        }
+    });
+</script>
+</head>
+<body>
+
+</body>
+
+</html>

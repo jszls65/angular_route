@@ -1,0 +1,58 @@
+<div class="navbar navbar-duomi navbar-static-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/Admin/index.html" id="logo">配置管理系统（流量包月）</a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <ul id="main-nav" class="nav nav-tabs nav-stacked" style="">
+                <li class="active">
+                    <a href=".mainPage">
+                        <i class="glyphicon glyphicon-th-large"></i> 首页
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref=".systemSetting" class="nav-header collapsed"  ng-click="$mainCtrl.isClose = !$mainCtrl.isClose">
+                        <i class="glyphicon glyphicon-cog"></i> 系统管理
+                        <span class="pull-right glyphicon" ng-class="{'glyphicon-chevron-right':$mainCtrl.isClose,'glyphicon-chevron-down':!$mainCtrl.isClose}"></span>
+                        
+                    </a>
+                    <ul id="systemSetting" class="nav nav-list  secondmenu" ng-class="{'collapse':$mainCtrl.isClose}">
+                        <li><a ui-sref=".userManage"><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
+                        <li><a ui-sref=".menuManage"><i class="glyphicon glyphicon-th-list"></i>菜单管理</a></li>
+                        <li><a ui-sref=".roleManage"><i class="glyphicon glyphicon-asterisk"></i>角色管理</a></li>
+                        <li><a ui-sref=".changePwd"><i class="glyphicon glyphicon-edit"></i>修改密码</a></li>
+                        <li><a ui-sref=".showLog"><i class="glyphicon glyphicon-eye-open"></i>日志查看</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a ui-sref=".logisticsManage">
+                        <i class="glyphicon glyphicon-credit-card"></i> 物料管理
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref=".distributeSetting">
+                        <i class="glyphicon glyphicon-globe"></i> 分发配置
+                        <span class="label label-warning pull-right">5</span>
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref=".iconStatistics">
+                        <i class="glyphicon glyphicon-calendar"></i> 图表统计
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref=".about">
+                        <i class="glyphicon glyphicon-fire"></i> 关于系统
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-10">
+            <div ui-view="mainDiv"></div>
+        </div>
+    </div>
+</div>
